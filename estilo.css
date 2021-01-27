@@ -1,0 +1,344 @@
+html,body{
+    position:fixed;
+    margin:0px;
+    width:100%;
+    height:100%;
+}
+body{
+    font-family:sans-serif;
+    background-color:#f6eec7;
+}
+#tab_trad{
+    background-color:#DED0CA;
+    margin-top:10%;
+    margin-left:7.5%;
+    width: 85%;
+    height: 350px;
+    text-align: center;
+    position:relative;
+    border: 5px solid #ee8972;
+    border-radius: 30px;
+    border-style: outset;
+}
+
+/*Selecionador de linguagens*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: auto;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 500px;
+    position: absolute;
+}
+#ul_parte2Libras,#ul_parte1Pt{/*esquerda*/
+    left: 10px;
+}
+#ul_parte1Libras,#ul_parte2Pt{/*direita*/
+    right: 10px;
+    float: right;
+}
+#ul_parte2Libras,#ul_parte1Pt,#ul_parte1Libras,#ul_parte2Pt{
+    position: absolute;
+    margin-top: 1%;
+    width: 40%;
+    height: 46px;
+}
+
+.a_pt{
+    width:150px;
+    top:1%;
+}
+#a_escrita,#a_sinais{
+    width: 145px;
+}
+#a_escrita{
+    left:220px;
+    top:0;
+    position:absolute;
+}
+
+li {
+    float:left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor:pointer;
+}
+li a:hover {
+    background-color: grey;
+}
+
+/*Tradução*/
+#idTexto{
+    left:4%;
+    top: 25%; 
+}
+#idTexto,#idImagem,#result1,#result2{
+    position: absolute;
+    padding: 10px;
+    overflow: auto;
+}
+#idTexto,#result2{
+    width:400px;
+    height:180px;
+    resize:none;
+}
+#result1{
+    top: 25%; 
+    width:500px;
+    height:235px;
+    left:55%;
+}
+#result2{
+    top:25%;
+    left: 59%;
+}
+#idImagem{
+    top: 22%; 
+    width:450px;
+    height:235px;
+    left:2.5%;
+    bottom: 10%;
+}
+
+/*Meio*/
+.td_meio{
+    top:30px;
+    left:48.5%;
+    position: absolute;
+    color: #9a5849;
+}
+#logo{
+    width:100px;
+    left:-35px;
+    top:70px;
+    position:absolute;
+}
+
+/*Ícones*/
+#idImagem img,i{
+    cursor: pointer;
+}
+#i_mic,#i_loop,#i_limparCaractere,#i_limpar2{
+    top:10px;
+    position:absolute;
+}
+#i_mic,#i_limparCaractere{
+    left:192px;
+}
+#i_loop{
+    right:13px;
+}
+#i_limpar1,#i_limpar2{
+    right:15px;
+    top:10px;
+    position:absolute;
+}
+
+/*Modal*/
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index: 2000;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container.mostrar{
+    display:flex;
+}
+.modal{
+    background-color: white;
+    width: 60%;
+    min-width: 300px;
+    padding:40px;
+    border: 10px solid #de7119;
+    box-shadow: 0 0 0 5px white;
+    position:relative;
+}
+.mostrar .modal{
+    animation:modal .3s;
+}
+.fechar{
+    position:absolute;
+    top:-30px;
+    right:-30px;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+    cursor: pointer;
+    font-size:1em;
+}
+
+/*Checkbox (Aba - cima, baixo, esquerda, direita)*/
+#botao1,#botao2,#botao3,#botao4{
+    color:#f6eec7;
+    position:absolute;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #dee3e2;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+    cursor: pointer;
+    font-size:40px;
+}
+#botao1,#botao3{
+    background-color:#ee8972;
+}
+#botao2,#botao4{
+    background-color:#9a5849;
+}
+#botao1{
+    top:-30px;
+    left:46.5%;
+    padding-top:2%;
+    padding-bottom:0.2%;
+    padding-left: 1.25%;
+    padding-right: 1%;
+    transition: top 1.5s;
+}
+#botao2{
+    bottom:-6%;
+    left:46.5%;
+    padding-bottom:2%;
+    padding-left: 1.4%;
+    padding-right: 1%;
+    padding-top:0.5%;
+    font-size:40px;
+    transition: top 1.5s;
+}
+#botao3{
+    top:250px;
+    left:-30px;
+    padding-bottom:1%;
+    padding-left: 2%;
+    padding-right: 0.5%;
+    padding-top:1%;
+    transition: left 1.5s;
+}
+#botao4{
+    top:250px;
+    right:-30px;
+    padding-bottom:1%;
+    padding-left: 0.5%;
+    padding-right:2%;
+    padding-top:1%;
+    transition: right 1.5s;
+}
+
+#box1,#box2,#box3,#box4,#tr_parte2,#i_fav1,#i_fav2{
+    display:none;
+}
+
+#box1:checked + .cima #txt1,#box1:checked + .cima #botao1,#box2:checked + .baixo #txt2,#box2:checked + .baixo #botao2,#box3:checked + .esquerda #txt3,#box3:checked + .esquerda #botao3,#box4:checked + .direita #txt4,#box4:checked + .direita #botao4{
+    transition-timing-function: ease-out;
+}
+
+#box1:checked + .cima #txt1{
+    top:0px;  
+}
+#box1:checked + .cima #botao1{
+    top:170px;
+}
+
+#box2:checked + .baixo #txt2{
+    top:352px;
+}
+#box2:checked + .baixo #botao2{
+    top:300px;
+}
+
+#box3:checked + .esquerda #txt3{
+    left:0px;
+}
+#box3:checked + .esquerda #botao3{
+    left:320px;
+}
+
+#box4:checked + .direita #txt4{
+    right:0px;
+}
+#box4:checked + .direita #botao4{
+    right:320px;
+}
+
+#txt1,#txt2,#txt3,#txt4{
+    display: block;
+    position:absolute;
+}
+#txt1{
+    top:-200px;
+    width: 100%;
+    height:200px;
+    transition: top 1.5s;
+    background-color:#ee8972 ;
+}
+#txt2{
+    top:100%;
+    width: 100%;
+    height:400px;
+    transition: top 1.5s;
+    background-color:#9a5849;
+}
+#txt3{
+    left:-350px;
+    top:0px;
+    width:350px;
+    height:100%;
+    transition: left 1.5s;
+    background-color:#ee8972 ;
+}
+#txt4{
+    right:-350px;
+    top:0px;
+    width:350px;
+    height:100%;
+    transition: right 1.5s;
+    background-color:#9a5849;
+}
+.a_txt4{
+    color:white;
+    text-decoration: underline;
+}
+
+#txt1titulo,#txt2titulo,#txt3titulo,#txt4titulo{
+    position:absolute;
+    font-family: arial;
+    color:white;
+    padding:10px;
+    text-indent: 20px;
+}
+#txt1corpo,#txt2corpo,#txt3corpo,#txt4corpo{
+    margin-top: 60px;
+    position:absolute;
+    font-family: arial;
+    color:white;
+    text-align: justify;
+    text-indent: 20px;
+    padding:10px;
+    line-height: 1.8;
+}
+@keyframes modal{
+    from{
+        opacity:0;
+        transform:translate3d(0,-60px,0);
+    }
+    to{
+        opacidade:1;
+        transform:translate3d(0,0,0);
+    }
+}
