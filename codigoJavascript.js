@@ -106,7 +106,7 @@ function funcPng(){
                 img_letra[i]=(inicio + 'virgula' + fim);
             break;
             default:
-                img_letra[i]=(inicio + texto.charAt(i).toLowerCase() + fim);
+                img_letra[i]=(inicio + texto.charAt(i) + fim);
         }
     }
     document.getElementById("result1").innerHTML=img_letra.join(" ");
