@@ -53,7 +53,7 @@ async function funcMp4(){
             default:
             video.src = 'letras_mp4/'+texto[i].toLowerCase()+'.mp4';
         }
-        await wait(2900);
+        await wait(3000);
     }
 }
 
