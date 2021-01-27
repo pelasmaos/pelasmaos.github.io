@@ -62,6 +62,7 @@ function funcPng(){
     result1.style.height="190px";
     var img_letra=[];
     var texto = document.getElementById("idTexto").value;
+    texto=texto.toLowerCase();
     var inicio = '<img src="letras_png/';
     var fim = '.png" width=45 height=45>';
     for (var i = 0, max = texto.length; i < max; i++) {
@@ -105,7 +106,7 @@ function funcPng(){
                 img_letra[i]=(inicio + 'virgula' + fim);
             break;
             default:
-                img_letra[i]=(inicio + texto.charAt(i) + fim);
+                img_letra[i]=(inicio + texto.charAt(i).toLowerCase() + fim);
         }
     }
     document.getElementById("result1").innerHTML=img_letra.join(" ");
