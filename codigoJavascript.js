@@ -51,7 +51,7 @@ async function funcMp4(){
                 video.src = 'letras_mp4/ESPAÇO.mp4';
             break;
             default:
-            video.src = 'letras_mp4/'+texto[i]+'.mp4';
+            video.src = 'letras_mp4/'+texto[i].toLowerCase()+'.mp4';
         }
         await wait(2500);
     }
