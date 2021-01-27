@@ -15,6 +15,7 @@ async function funcMp4(){
     document.getElementById('result1').innerHTML = "";
     result1.style.height="235px";
     var texto = document.getElementById("idTexto").value;
+    texto=texto.toLowerCase();
     var elemento_pai = document.getElementById("result1"); //o elemento pai é o local aonde será reproduzido o vídeo
     var video = document.createElement('video');//cria o elemento vídeo
     video.style.width="500px";
@@ -22,7 +23,7 @@ async function funcMp4(){
     elemento_pai.appendChild(video);//insere o vídeo no elemento pai
     video.autoplay = true;
     for(var i=0;i<texto.length;i++){
-        switch(texto[i].toLowerCase()) {
+        switch(texto[i]) {
             case "á": case "à": case "ã": case "â":
             case "Á": case "À": case "Ã": case "Â":
                 video.src = 'letras_mp4/a.mp4';
