@@ -1,11 +1,4 @@
-function iniciaModal(id){
-    var modal=document.getElementById(id);
-    modal.classList.add('mostrar');
-}
-function fecharModal(id){
-    var modal=document.getElementById(id);
-    modal.classList.remove('mostrar');
-}
+
 function iniciarPt1(id){
     var pt1=document.getElementById(id);
     pt1.classList.add('mostar');
